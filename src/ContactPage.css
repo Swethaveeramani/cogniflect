@@ -1,0 +1,118 @@
+/* src/ContactPage.css */
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #fcfafa; /* Light background */
+    color: #070707; /* Dark text color for contrast */
+    height: 9vh; /* Ensure full viewport height */
+}
+
+h1 {
+    font-size: 2.5rem; /* Reduced font size for better fit */
+    color: #fff; /* White color for heading */
+    margin-bottom: 10px; /* Reduced margin for compact view */
+}
+
+/* Flex container for responsive single-line layout */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 10px; /* Reduced gap for compact view */
+    justify-content: center; /* Center items horizontally */
+}
+
+/* Responsive contact item styling */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Reduced gap for compact view */
+    font-size: 1rem; /* Smaller font size for compact view */
+    color: #fff; /* White color for contact items */
+    max-width: 100%; /* Ensure items fit within the container */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for transform and opacity */
+    font-size: 1.5rem;
+}
+
+/* Specific spacing for email and phone number */
+.email-phone {
+    margin-right: 20px; /* Space between email and phone number */
+    font-size: 1.5rem;
+}
+
+/* Icon styling */
+.contact-item i {
+    font-size: 2.5rem; /* Smaller icon size for compact view */
+    color: #047ffa; /* Blue color for icons */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for icon color and transform */
+}
+
+/* Link styling */
+.contact-item a {
+    text-decoration: none;
+    color: #080808; /* Dark color for links */
+    transition: color 0.3s ease; /* Smooth transition for link color */
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .contact-page {
+        padding: 10px; /* Reduced padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 1.2rem; /* Further reduced font size for smaller screens */
+        margin-bottom: 5px; /* Further reduced margin */
+    }
+
+    .contact-item {
+        font-size: 0.9rem; /* Smaller font size for very small screens */
+    }
+
+    .contact-item i {
+        font-size: 1rem; /* Smaller icon size for very small screens */
+    }
+}
+
+/* Additional styles for improved visuals */
+.contact-item i {
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for icon color and transform */
+}
+
+.contact-item i:hover {
+    color: #107cef; /* Darker blue on hover */
+    transform: scale(1.2); /* Slightly enlarge icon on hover */
+}
+
+.contact-item a {
+    transition: color 0.3s ease; /* Smooth transition for link color */
+}
+
+.contact-item a:hover {
+    color: #053469; /* Darker blue for links on hover */
+}
+
+/* Animation effect for contact items */
+.contact-item:hover {
+    animation: jump 0.6s ease; /* Apply jump animation on hover */
+}
+
+/* Keyframes for jump animation */
+@keyframes jump {
+    0% {
+        transform: translateY(0); /* Start at original position */
+    }
+    50% {
+        transform: translateY(-10px); /* Move up */
+    }
+    100% {
+        transform: translateY(0); /* Return to original position */
+    }
+}
